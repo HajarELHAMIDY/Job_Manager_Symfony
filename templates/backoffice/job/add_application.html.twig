@@ -1,0 +1,50 @@
+{% extends '/backoffice/base.html.twig' %}
+{% block title %}Add application{% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+  <div class="sidebar" data-color="purple" data-background-color="white" data-image="{{ asset('assets/img/sidebar-1.jpg')}}">
+          <div class="logo">
+            <a href="" class="simple-text logo-normal">
+              Good job 
+            </a>
+          </div>
+          <div class="sidebar-wrapper">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="{{path('admin')}}">
+                  <i class="material-icons">dashboard</i>
+                  <p>Acceuil</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{path('job')}}">
+                  <i class="material-icons">list</i>
+                  <p>List des offres</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{path('app_backend')}}">
+                    <i class="material-icons">gavel</i>
+                    <p>Application</p>
+                  </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+          <div class="container">
+        <div class="row mt-4">
+          <div class="row col-md-6 mx-auto">
+            <div class="card bg-light rounded">
+              <div class="container-fluid">
+                <h3 class="card-title text-default p-4" style="color: black;"> <center>Insertion des informations</center></h3>
+                <div class="card-body mt-2 rounded">
+                  {{form(form)}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+ {% endblock %}
